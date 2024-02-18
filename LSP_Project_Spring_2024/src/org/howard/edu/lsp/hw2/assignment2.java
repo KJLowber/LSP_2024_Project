@@ -41,6 +41,7 @@ public class assignment2 {
         }
     }
     
+    
     //method checking if word is valid (a string of all letters and longer than 3 letters)
     public static boolean isValidWord(String word) {
         return word.length()-1 > 3 && !isNumeric(word);
