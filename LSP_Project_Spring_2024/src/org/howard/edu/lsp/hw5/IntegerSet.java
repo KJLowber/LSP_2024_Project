@@ -177,8 +177,12 @@ public class IntegerSet {
      * @param intSetb the other IntegerSet to compute complement with.
      */
     public void complement(IntegerSet intSetb) {
+        int min = this.smallest();
+        int max = this.largest();
+        
         List<Integer> complement = new ArrayList<>();
-        for (int i = Integer.MIN_VALUE; i <= Integer.MAX_VALUE; i++) {
+        
+        for (int i = min; i <= max; i++) {
             if (!this.set.contains(i) && !intSetb.set.contains(i)) {
                 complement.add(i);
             }
